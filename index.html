@@ -1,5 +1,226 @@
 <!DOCTYPE html>
-<html>
-<head><title>My Image Bed</title></head>
-<body><h1>Hello World</h1></body>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDN Assets - 静态资源库</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #4CAF50;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #555;
+        }
+        .cdn-addresses {
+            background-color: #f0f8f0;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        .cdn-addresses p {
+            margin: 10px 0;
+            font-family: monospace;
+            font-size: 1.1em;
+        }
+        .usage-example {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+            margin: 15px 0;
+        }
+        pre {
+            background-color: #333;
+            color: #f8f8f8;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .file-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .file-card {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            transition: transform 0.2s;
+        }
+        .file-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .file-card h4 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+        .file-card a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        .file-card a:hover {
+            text-decoration: underline;
+        }
+        .directory-structure {
+            background-color: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: monospace;
+            white-space: pre-wrap;
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CDN Assets - 静态资源库</h1>
+        <p>使用 Cloudflare 加速的静态资源托管</p>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>📁 仓库介绍</h2>
+            <p>这是一个用于存放静态资源的仓库，包含图片、CSS、JS等文件。所有资源均通过 Cloudflare CDN 加速，确保全球访问速度。</p>
+        </section>
+
+        <section class="section">
+            <h2>🚀 CDN 加速地址</h2>
+            <div class="cdn-addresses">
+                <p>主地址：<strong>https://cdn-assets-2ch.pages.dev</strong></p>
+                <p>备用地址：<strong>https://cdn-cf.cayzlh.com</strong></p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📖 使用方法</h2>
+            <h3>1. 直接访问文件</h3>
+            <div class="usage-example">
+                <p>格式：<code>CDN地址/文件路径</code></p>
+                <p>示例：<code>https://cdn-assets-2ch.pages.dev/image/avatar.png</code></p>
+            </div>
+
+            <h3>2. 在网页中引用</h3>
+            <pre>
+&lt;!-- 引用图片 --&gt;
+&lt;img src="https://cdn-assets-2ch.pages.dev/image/avatar.png" alt="头像"&gt;
+
+&lt;!-- 引用CSS --&gt;
+&lt;link rel="stylesheet" href="https://cdn-assets-2ch.pages.dev/css/style.css"&gt;
+
+&lt;!-- 引用JS --&gt;
+&lt;script src="https://cdn-assets-2ch.pages.dev/js/tools_main.js"&gt;&lt;/script&gt;</pre>
+        </section>
+
+        <section class="section">
+            <h2>🔗 常用文件链接</h2>
+            <div class="file-links">
+                <div class="file-card">
+                    <h4>图片资源</h4>
+                    <ul>
+                        <li><a href="https://cdn-assets-2ch.pages.dev/image/avatar.png" target="_blank">头像 (avatar.png)</a></li>
+                        <li><a href="https://cdn-assets-2ch.pages.dev/image/bg.jpg" target="_blank">背景图 (bg.jpg)</a></li>
+                        <li><a href="https://cdn-assets-2ch.pages.dev/logo/logo.png" target="_blank">Logo (logo.png)</a></li>
+                    </ul>
+                </div>
+                <div class="file-card">
+                    <h4>CSS 文件</h4>
+                    <ul>
+                        <li><a href="https://cdn-assets-2ch.pages.dev/css/style.css" target="_blank">样式文件 (style.css)</a></li>
+                        <li><a href="https://cdn-assets-2ch.pages.dev/css/cayzlh-zfont.css" target="_blank">字体样式 (cayzlh-zfont.css)</a></li>
+                    </ul>
+                </div>
+                <div class="file-card">
+                    <h4>JS 文件</h4>
+                    <ul>
+                        <li><a href="https://cdn-assets-2ch.pages.dev/js/tools_main.js" target="_blank">工具脚本 (tools_main.js)</a></li>
+                        <li><a href="https://cdn-assets-2ch.pages.dev/js/clicklove.js" target="_blank">点击爱心效果 (clicklove.js)</a></li>
+                    </ul>
+                </div>
+                <div class="file-card">
+                    <h4>封面图片</h4>
+                    <ul>
+                        <li><a href="https://cdn-assets-2ch.pages.dev/covers/Java.png" target="_blank">Java 封面</a></li>
+                        <li><a href="https://cdn-assets-2ch.pages.dev/covers/Linux.jpg" target="_blank">Linux 封面</a></li>
+                        <li><a href="https://cdn-assets-2ch.pages.dev/covers/Spring.png" target="_blank">Spring 封面</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>📁 目录结构</h2>
+            <div class="directory-structure">
+/ (根目录)
+├── 2021/          # 2021年的资源
+├── 2022/          # 2022年的资源
+├── blog/          # 博客相关资源
+├── covers/        # 封面图片
+├── css/           # CSS文件
+├── font/          # 字体文件
+├── image/         # 图片资源
+├── images/        # 图片资源
+├── js/            # JavaScript文件
+├── logo/          # Logo文件
+├── picgo/         # PicGo相关资源
+├── uPic/          # uPic相关资源
+├── README.md      # 说明文件
+└── index.html     # 本页面
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>💡 使用提示</h2>
+            <ul>
+                <li>所有资源均已通过 Cloudflare CDN 加速，全球访问速度快</li>
+                <li>建议使用主地址，备用地址可在主地址不可用时使用</li>
+                <li>文件路径区分大小写，请确保路径正确</li>
+                <li>如果需要添加新资源，请直接上传到对应目录</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2026 CDN Assets - 静态资源库</p>
+    </footer>
+</body>
 </html>
